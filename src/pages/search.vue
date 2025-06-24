@@ -11,7 +11,7 @@
         md="4"
         sm="6"
       >
-        <v-card rounded="lg">
+        <v-card rounded="lg" :to="`/book/${n}`">
           <v-img height="200" src="/images/smlcover.png" />
           <v-card-title>搜索结果 {{ n }}</v-card-title>
         </v-card>
