@@ -23,7 +23,7 @@
             md="4"
             sm="6"
           >
-            <v-card :href="book.href" rounded="lg" :subtitle="book.author" :title="book.name">
+            <v-card rounded="lg" :subtitle="book.author" :title="book.name" :to="`/book/${book.id}`">
               <v-img height="200" :src="book.cover" />
             </v-card>
           </v-col>
@@ -46,7 +46,7 @@
             md="4"
             sm="6"
           >
-            <v-card :href="book.href" rounded="lg" :subtitle="book.author" :title="book.name">
+            <v-card rounded="lg" :subtitle="book.author" :title="book.name" :to="`/book/${book.id}`">
               <v-img height="200" :src="book.cover" />
             </v-card>
           </v-col>

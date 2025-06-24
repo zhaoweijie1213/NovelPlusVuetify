@@ -12,7 +12,7 @@
       <tbody>
         <tr v-for="n in 10" :key="n">
           <td>{{ n }}</td>
-          <td>范例小说 {{ n }}</td>
+          <td><RouterLink :to="`/book/${n}`">范例小说 {{ n }}</RouterLink></td>
           <td>作者 {{ n }}</td>
         </tr>
       </tbody>
