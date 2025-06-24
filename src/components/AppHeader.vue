@@ -1,23 +1,10 @@
 <template>
   <v-app-bar color="primary" density="comfortable" elevate-on-scroll scroll-behavior="hide">
-    <v-app-bar-nav-icon class="d-lg-none" @click="$emit('toggle-drawer')" />
-    <v-toolbar-title class="text-h6">
-      <RouterLink class="text-white text-decoration-none" to="/">{{ siteName }}</RouterLink>
-    </v-toolbar-title>
-    <v-toolbar-items class="hidden-sm-and-down">
-      <RouterLink to="/">
-        <v-btn class="text-white" variant="text">首页</v-btn>
-      </RouterLink>
-      <RouterLink to="/library">
-        <v-btn class="text-white" variant="text">书库</v-btn>
-      </RouterLink>
-      <RouterLink to="/rank">
-        <v-btn class="text-white" variant="text">排行榜</v-btn>
-      </RouterLink>
-      <RouterLink to="/author">
-        <v-btn class="text-white" variant="text">作家专区</v-btn>
-      </RouterLink>
-    </v-toolbar-items>
+    <v-app-bar-nav-icon class="d-md-none" @click="$emit('toggle-drawer')" />
+    <RouterLink class="d-flex align-center text-white text-decoration-none mr-4" to="/">
+      <v-img class="mr-2" height="32" src="/src/assets/logo.png" />
+      <span class="text-h6">{{ siteName }}</span>
+    </RouterLink>
     <v-spacer />
     <v-text-field
       v-model="searchKey"
@@ -38,6 +25,12 @@
       <v-btn variant="text">注册</v-btn>
     </RouterLink>
   </v-app-bar>
+  <v-toolbar class="d-none d-md-flex" color="primary" density="comfortable">
+    <RouterLink class="text-white mx-2" to="/">首页</RouterLink>
+    <RouterLink class="text-white mx-2" to="/library">全部作品</RouterLink>
+    <RouterLink class="text-white mx-2" to="/rank">排行榜</RouterLink>
+    <RouterLink class="text-white mx-2" to="/author">作家专区</RouterLink>
+  </v-toolbar>
 </template>
 
 <script setup lang="ts">
