@@ -2,8 +2,30 @@
   <v-container fluid>
     <v-row class="mb-8 rounded-lg row-item">
       <v-col cols="12" md="9">
-        <v-carousel height="300" hide-delimiter-background>
-          <v-carousel-item v-for="(item, i) in carouselItems" :key="i" :src="item.src" />
+        <v-carousel
+          height="300"
+          hide-delimiter-background
+          vertical-delimiters="right"
+        >
+          <template #item="{ item, props }">
+            <v-btn
+              v-bind="props"
+              class="pa-0 ma-0"
+              size="x-small"
+              variant="text"
+              @click="router.push(`/book/${(item as any).value.id}`)"
+            >
+              <v-img height="60" :src="(item as any).value.cover" width="40" />
+            </v-btn>
+          </template>
+          <v-carousel-item
+            v-for="book in carouselItems"
+            :key="book.id"
+            :src="book.cover"
+            :value="book"
+          >
+            <v-img cover height="300" :src="book.cover" />
+          </v-carousel-item>
         </v-carousel>
       </v-col>
       <v-col cols="12" md="3">
@@ -85,6 +107,8 @@
 </template>
 
 <script lang="ts" setup>
+  import { useRouter } from 'vue-router'
+
   interface Book {
     id: number
     name: string
@@ -93,11 +117,7 @@
     href: string
   }
 
-  const carouselItems = [
-    { src: '/images/smlcover.png' },
-    { src: '/images/smlcover.png' },
-    { src: '/images/smlcover.png' },
-  ]
+  const router = useRouter()
 
   const books: Book[] = [
     { id: 1, name: '范例小说一', author: '作者A', cover: '/images/smlcover.png', href: '#' },
@@ -105,6 +125,8 @@
     { id: 3, name: '范例小说三', author: '作者C', cover: '/images/smlcover.png', href: '#' },
     { id: 4, name: '范例小说四', author: '作者D', cover: '/images/smlcover.png', href: '#' },
   ]
+
+  const carouselItems = books.slice(0, 3)
 
   const weekBooks: Book[] = [
     { id: 5, name: '周推一', author: '作者E', cover: '/images/smlcover.png', href: '#' },
