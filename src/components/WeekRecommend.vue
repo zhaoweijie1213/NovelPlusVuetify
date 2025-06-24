@@ -2,6 +2,7 @@
   <v-list density="compact" nav>
     <v-subheader>
       <h2>本周强推</h2>
+      <v-divider />
     </v-subheader>
     <v-list-item
       v-for="book in books"

@@ -14,7 +14,8 @@
 
     <v-row class="mb-8 rounded-lg row-item">
       <v-col cols="12" md="9">
-        <h2 class="text-h5 font-weight-bold mb-4">热门推荐</h2>
+        <h2 class="text-h5 font-weight-bold mt-3">热门推荐</h2>
+        <v-divider class="mb-2" />
         <v-row>
           <v-col
             v-for="book in books"
@@ -37,7 +38,8 @@
 
     <v-row class="mb-8 rounded-lg row-item">
       <v-col cols="12" md="9">
-        <h2 class="text-h5 font-weight-bold mb-4">精品推荐</h2>
+        <h2 class="text-h5 font-weight-bold mt-3">精品推荐</h2>
+        <v-divider class="mb-2" />
         <v-row>
           <v-col
             v-for="book in goodBooks"
@@ -60,7 +62,8 @@
 
     <v-row class="rounded-lg row-item">
       <v-col cols="12" md="9">
-        <h2 class="text-h5 font-weight-bold mb-4">最新更新</h2>
+        <h2 class="text-h5 font-weight-bold mt-3">最新更新</h2>
+        <v-divider class="mb-2" />
         <v-table density="compact">
           <thead>
             <tr>
