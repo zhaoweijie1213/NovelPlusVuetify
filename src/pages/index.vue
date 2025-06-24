@@ -12,10 +12,42 @@
           <v-carousel-item v-for="(item, i) in carouselItems" :key="i" :src="item.src" />
         </v-carousel>
 
+        <h2 class="text-h5 font-weight-bold mt-8 mb-4">本周强推</h2>
+        <v-row>
+          <v-col
+            v-for="book in weekBooks"
+            :key="book.id"
+            cols="12"
+            lg="3"
+            md="4"
+            sm="6"
+          >
+            <v-card :href="book.href" rounded="lg" :subtitle="book.author" :title="book.name">
+              <v-img height="200" :src="book.cover" />
+            </v-card>
+          </v-col>
+        </v-row>
+
         <h2 class="text-h5 font-weight-bold mt-8 mb-4">热门推荐</h2>
         <v-row>
           <v-col
             v-for="book in books"
+            :key="book.id"
+            cols="12"
+            lg="3"
+            md="4"
+            sm="6"
+          >
+            <v-card :href="book.href" rounded="lg" :subtitle="book.author" :title="book.name">
+              <v-img height="200" :src="book.cover" />
+            </v-card>
+          </v-col>
+        </v-row>
+
+        <h2 class="text-h5 font-weight-bold mt-8 mb-4">精品推荐</h2>
+        <v-row>
+          <v-col
+            v-for="book in goodBooks"
             :key="book.id"
             cols="12"
             lg="3"
@@ -62,5 +94,19 @@
     { id: 2, name: '范例小说二', author: '作者B', cover: '/images/smlcover.png', href: '#' },
     { id: 3, name: '范例小说三', author: '作者C', cover: '/images/smlcover.png', href: '#' },
     { id: 4, name: '范例小说四', author: '作者D', cover: '/images/smlcover.png', href: '#' },
+  ]
+
+  const weekBooks: Book[] = [
+    { id: 5, name: '周推一', author: '作者E', cover: '/images/smlcover.png', href: '#' },
+    { id: 6, name: '周推二', author: '作者F', cover: '/images/smlcover.png', href: '#' },
+    { id: 7, name: '周推三', author: '作者G', cover: '/images/smlcover.png', href: '#' },
+    { id: 8, name: '周推四', author: '作者H', cover: '/images/smlcover.png', href: '#' },
+  ]
+
+  const goodBooks: Book[] = [
+    { id: 9, name: '精品一', author: '作者I', cover: '/images/smlcover.png', href: '#' },
+    { id: 10, name: '精品二', author: '作者J', cover: '/images/smlcover.png', href: '#' },
+    { id: 11, name: '精品三', author: '作者K', cover: '/images/smlcover.png', href: '#' },
+    { id: 12, name: '精品四', author: '作者L', cover: '/images/smlcover.png', href: '#' },
   ]
 </script>
