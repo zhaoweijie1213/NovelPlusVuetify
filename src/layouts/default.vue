@@ -17,7 +17,9 @@
     <v-container fluid>
       <v-row justify="center">
         <v-col cols="12" md="10">
-          <router-view />
+          <v-sheet class="pa-4" color="white" rounded="lg">
+            <router-view />
+          </v-sheet>
         </v-col>
       </v-row>
     </v-container>

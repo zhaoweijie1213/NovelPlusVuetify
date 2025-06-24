@@ -60,7 +60,7 @@
     <v-row>
       <v-col cols="12" md="10">
         <h2 class="text-h5 font-weight-bold mb-4">最新更新</h2>
-        <v-table density="compact">
+        <v-table class="bg-white" density="compact" rounded="lg">
           <thead>
             <tr>
               <th class="text-left">书名</th>
