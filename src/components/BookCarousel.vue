@@ -1,7 +1,12 @@
 <template>
-  <v-row class="book-carousel" no-gutters>
+  <v-row class="book-carousel h-100" no-gutters>
     <v-col class="flex-grow-1">
-      <v-window v-model="current" class="h-100">
+      <v-window
+        v-model="current"
+        class="h-100 w-100"
+        direction="vertical"
+        show-arrows
+      >
         <v-window-item v-for="(item, index) in items" :key="item.id" :value="index">
           <v-img cover :height="height" :src="item.cover" />
         </v-window-item>
