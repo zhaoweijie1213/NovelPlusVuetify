@@ -1,6 +1,14 @@
-# Vuetify (Default)
+# 小说精品屋
 
-This is the official scaffolding tool for Vuetify, designed to give you a head start in building your new Vuetify application. It sets up a base template with all the necessary configurations and standard directory structure, enabling you to begin development without the hassle of setting up the project from scratch.
+> 更新于 2025-06-24 12:11:19 (北京时间)
+
+基于 [http://117.72.165.13:8888](http://117.72.165.13:8888) 重构的小说阅读网站前端，使用 **Vue 3** 与 **Vuetify 3** 开发，支持深浅主题切换。项目目录主要分为：
+
+- `src/components`：通用组件
+- `src/layouts`：应用布局
+- `src/pages`：路由页面
+
+首页展示轮播图、分类列表与热门推荐，布局采用响应式导航抽屉与顶部工具栏。
 
 ## ❗️ Important Links
 
