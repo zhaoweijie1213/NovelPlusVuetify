@@ -31,7 +31,7 @@
   const props = defineProps<{ books: Book[] }>()
   const router = useRouter()
 
-  const groups = computed(() => [props.books.slice(0, 5), props.books.slice(5, 10)])
+  const groups = computed(() => [props.books.slice(0, 3), props.books.slice(3, 5)])
 
   function goBook (id: number) {
     router.push(`/book/${id}`)

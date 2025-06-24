@@ -89,16 +89,9 @@
 </template>
 
 <script lang="ts" setup>
+  import type { Book } from '@/types/novel'
   import BookCarousel from '@/components/BookCarousel.vue'
   import HotArticles from '@/components/HotArticles.vue'
-
-  interface Book {
-    id: number
-    name: string
-    author: string
-    cover: string
-    href: string
-  }
 
   const books: Book[] = [
     { id: 1, name: '范例小说一', author: '作者A', cover: '/images/smlcover.png', href: '#' },
@@ -107,7 +100,7 @@
     { id: 4, name: '范例小说四', author: '作者D', cover: '/images/smlcover.png', href: '#' },
   ]
 
-  const carouselItems = books.slice(0, 3)
+  const carouselItems = books.slice(0, 4)
 
   const topBooks: Book[] = [
     { id: 25, name: '热榜一', author: '作者Y', cover: '/images/smlcover.png', href: '#' },
