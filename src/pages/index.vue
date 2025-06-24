@@ -2,40 +2,10 @@
   <v-container fluid>
     <v-row class="mb-8 rounded-lg row-item">
       <v-col cols="12" md="4">
-        <v-carousel
-          :continuous="false"
-          delimiter-icon="mdi-square"
-          direction="vertical"
-          height="300"
-          hide-delimiter-background
-          :show-arrows="false"
-          vertical-delimiters="right"
-        >
-          <!-- <template #item="{ item, props }">
-            <v-btn
-              v-bind="props"
-              class="pa-0 my-4"
-              size="x-small"
-              variant="text"
-              @click="router.push(`/book/${(item as any).value.id}`)"
-            >
-              <v-img height="60" :src="(item as any).value.cover" width="40" />
-            </v-btn>
-          </template> -->
-          <v-carousel-item
-            v-for="book in carouselItems"
-            :key="book.id"
-            :src="book.cover"
-            :value="book"
-          >
-            <v-sheet height="100%" tile width="70%">
-              <v-img cover :src="book.cover" />
-            </v-sheet>
-          </v-carousel-item>
-        </v-carousel>
+        <BookCarousel :height="300" :items="carouselItems" />
       </v-col>
       <v-col cols="12" md="5">
-        <div class="hot_articles" />
+        <HotArticles :books="topBooks" />
       </v-col>
       <v-col cols="12" md="3">
         <WeekRecommend :books="weekBooks" />
@@ -116,7 +86,8 @@
 </template>
 
 <script lang="ts" setup>
-  import { useRouter } from 'vue-router'
+  import BookCarousel from '@/components/BookCarousel.vue'
+  import HotArticles from '@/components/HotArticles.vue'
 
   interface Book {
     id: number
@@ -126,8 +97,6 @@
     href: string
   }
 
-  const router = useRouter()
-
   const books: Book[] = [
     { id: 1, name: '范例小说一', author: '作者A', cover: '/images/smlcover.png', href: '#' },
     { id: 2, name: '范例小说二', author: '作者B', cover: '/images/smlcover.png', href: '#' },
@@ -136,6 +105,19 @@
   ]
 
   const carouselItems = books.slice(0, 3)
+
+  const topBooks: Book[] = [
+    { id: 25, name: '热榜一', author: '作者Y', cover: '/images/smlcover.png', href: '#' },
+    { id: 26, name: '热榜二', author: '作者Z', cover: '/images/smlcover.png', href: '#' },
+    { id: 27, name: '热榜三', author: '作者AA', cover: '/images/smlcover.png', href: '#' },
+    { id: 28, name: '热榜四', author: '作者BB', cover: '/images/smlcover.png', href: '#' },
+    { id: 29, name: '热榜五', author: '作者CC', cover: '/images/smlcover.png', href: '#' },
+    { id: 30, name: '热榜六', author: '作者DD', cover: '/images/smlcover.png', href: '#' },
+    { id: 31, name: '热榜七', author: '作者EE', cover: '/images/smlcover.png', href: '#' },
+    { id: 32, name: '热榜八', author: '作者FF', cover: '/images/smlcover.png', href: '#' },
+    { id: 33, name: '热榜九', author: '作者GG', cover: '/images/smlcover.png', href: '#' },
+    { id: 34, name: '热榜十', author: '作者HH', cover: '/images/smlcover.png', href: '#' },
+  ]
 
   const weekBooks: Book[] = [
     { id: 5, name: '周推一', author: '作者E', cover: '/images/smlcover.png', href: '#' },
