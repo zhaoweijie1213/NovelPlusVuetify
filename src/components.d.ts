@@ -10,8 +10,12 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./components/AppFooter.vue')['default']
     AppHeader: typeof import('./components/AppHeader.vue')['default']
+    ClickRank: typeof import('./components/ClickRank.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    NewBookRank: typeof import('./components/NewBookRank.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UpdateRank: typeof import('./components/UpdateRank.vue')['default']
+    WeekRecommend: typeof import('./components/WeekRecommend.vue')['default']
   }
 }
