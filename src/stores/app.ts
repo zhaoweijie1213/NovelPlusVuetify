@@ -4,7 +4,7 @@ import { useTheme } from 'vuetify'
 
 export const useAppStore = defineStore('app', {
   state: () => ({
-    theme: 'dark' as 'light' | 'dark',
+    theme: 'light' as 'light' | 'dark',
   }),
   actions: {
     toggleTheme () {
