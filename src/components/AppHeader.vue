@@ -1,9 +1,23 @@
 <template>
   <v-app-bar color="primary" density="comfortable" elevate-on-scroll>
-    <v-app-bar-nav-icon class="d-lg-none" @click="drawer = !drawer" />
+    <v-app-bar-nav-icon class="d-lg-none" @click="$emit('toggle-drawer')" />
     <v-toolbar-title class="text-h6">
       <RouterLink class="text-white text-decoration-none" to="/">{{ siteName }}</RouterLink>
     </v-toolbar-title>
+    <v-toolbar-items class="hidden-sm-and-down">
+      <RouterLink to="/">
+        <v-btn class="text-white" variant="text">首页</v-btn>
+      </RouterLink>
+      <RouterLink to="/library">
+        <v-btn class="text-white" variant="text">书库</v-btn>
+      </RouterLink>
+      <RouterLink to="/rank">
+        <v-btn class="text-white" variant="text">排行榜</v-btn>
+      </RouterLink>
+      <RouterLink to="/author">
+        <v-btn class="text-white" variant="text">作家专区</v-btn>
+      </RouterLink>
+    </v-toolbar-items>
     <v-spacer />
     <v-text-field
       v-model="searchKey"
@@ -31,6 +45,8 @@
   import { useRouter } from 'vue-router'
   import { useAppStore } from '@/stores/app'
 
+  defineEmits(['toggle-drawer'])
+
   const searchKey = ref('')
   const router = useRouter()
   const siteName = '小说精品屋'
@@ -46,6 +62,4 @@
   function toggleTheme () {
     appStore.toggleTheme()
   }
-
-  const drawer = ref(false)
 </script>
