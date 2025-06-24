@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="primary" density="comfortable" elevate-on-scroll>
+  <v-app-bar color="primary" density="comfortable" elevate-on-scroll scroll-behavior="hide">
     <v-app-bar-nav-icon class="d-lg-none" @click="$emit('toggle-drawer')" />
     <v-toolbar-title class="text-h6">
       <RouterLink class="text-white text-decoration-none" to="/">{{ siteName }}</RouterLink>
