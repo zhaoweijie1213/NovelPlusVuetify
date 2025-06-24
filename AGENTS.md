@@ -14,15 +14,13 @@
 
 ## 前端开发说明
 
-1. **novel-plus-vue项目基于http://117.72.165.13:8888重构**
-2. **开发环境使用 Mock 数据和与服务端进行交互，涉及到的技术有：**
+1. **开发环境使用 Mock 数据和与服务端进行交互，涉及到的技术有：**
 
 - [Nitro](https://nitro.unjs.io/) 轻量级后端服务器，可部署在任何地方，项目用作于 Mock 服务器。
 - [axios](https://axios-http.com/docs/intro) 用于发送 HTTP 请求与服务端进行交互。
 
 2. **所有前端代码尽可能使用vuetify的组件重构，支持多主题切换**
-3. **java-code-source/novel-front前端图片资源已经放到novel-plus-vue\public\images**
-4. **公共组件放在novel-plus-vue\src\components文件夹；页面放在novel-plus-vue\src\pages文件夹**
+4. **公共组件放在src\components文件夹；页面放在src\pages文件夹**
 5. **编程时注意组件化,不要一个页面写非常多的代码**
 
 ## 说明
