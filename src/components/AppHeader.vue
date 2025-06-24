@@ -1,10 +1,13 @@
 <template>
   <v-app-bar color="primary" density="comfortable" elevate-on-scroll scroll-behavior="hide">
-    <v-app-bar-nav-icon class="d-md-none" @click="$emit('toggle-drawer')" />
-    <RouterLink class="d-flex align-center text-white text-decoration-none mr-4" to="/">
-      <v-img class="mr-2" height="32" src="/src/assets/logo.png" />
-      <span class="text-h6">{{ siteName }}</span>
-    </RouterLink>
+    <template #prepend>
+      <v-app-bar-nav-icon @click="$emit('toggle-drawer')" />
+    </template>
+    <v-app-bar-title>
+      <RouterLink class="d-flex text-white text-decoration-none" to="/">
+        <span class="text-h6">{{ siteName }}</span>
+      </RouterLink>
+    </v-app-bar-title>
     <v-spacer />
     <v-text-field
       v-model="searchKey"
@@ -18,19 +21,9 @@
     <v-btn class="mr-2" icon @click="toggleTheme">
       <v-icon>{{ themeIcon }}</v-icon>
     </v-btn>
-    <RouterLink to="/user/login">
-      <v-btn variant="text">登录</v-btn>
-    </RouterLink>
-    <RouterLink to="/user/register">
-      <v-btn variant="text">注册</v-btn>
-    </RouterLink>
+    <v-btn variant="text">登录</v-btn>
+    <v-btn variant="text">注册</v-btn>
   </v-app-bar>
-  <v-toolbar class="d-none d-md-flex" color="primary" density="comfortable">
-    <RouterLink class="text-white mx-2" to="/">首页</RouterLink>
-    <RouterLink class="text-white mx-2" to="/library">全部作品</RouterLink>
-    <RouterLink class="text-white mx-2" to="/rank">排行榜</RouterLink>
-    <RouterLink class="text-white mx-2" to="/author">作家专区</RouterLink>
-  </v-toolbar>
 </template>
 
 <script setup lang="ts">

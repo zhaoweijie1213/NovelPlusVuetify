@@ -1,18 +1,18 @@
 <template>
   <v-container fluid>
-    <v-row class="mb-8 row-item">
-      <v-col cols="12" md="10">
+    <v-row class="mb-8 rounded-lg row-item">
+      <v-col cols="12" md="9">
         <v-carousel height="300" hide-delimiter-background>
           <v-carousel-item v-for="(item, i) in carouselItems" :key="i" :src="item.src" />
         </v-carousel>
       </v-col>
-      <v-col cols="12" md="2">
+      <v-col cols="12" md="3">
         <WeekRecommend :books="weekBooks" />
       </v-col>
     </v-row>
 
-    <v-row class="mb-8 row-item">
-      <v-col cols="12" md="10">
+    <v-row class="mb-8 rounded-lg row-item">
+      <v-col cols="12" md="9">
         <h2 class="text-h5 font-weight-bold mb-4">热门推荐</h2>
         <v-row>
           <v-col
@@ -29,13 +29,13 @@
           </v-col>
         </v-row>
       </v-col>
-      <v-col cols="12" md="2">
+      <v-col cols="12" md="3">
         <ClickRank :books="clickBooks" />
       </v-col>
     </v-row>
 
-    <v-row class="mb-8 row-item">
-      <v-col cols="12" md="10">
+    <v-row class="mb-8 rounded-lg row-item">
+      <v-col cols="12" md="9">
         <h2 class="text-h5 font-weight-bold mb-4">精品推荐</h2>
         <v-row>
           <v-col
@@ -52,13 +52,13 @@
           </v-col>
         </v-row>
       </v-col>
-      <v-col cols="12" md="2">
+      <v-col cols="12" md="3">
         <NewBookRank :books="newBooks" />
       </v-col>
     </v-row>
 
-    <v-row class="row-item">
-      <v-col cols="12" md="10">
+    <v-row class="rounded-lg row-item">
+      <v-col cols="12" md="9">
         <h2 class="text-h5 font-weight-bold mb-4">最新更新</h2>
         <v-table density="compact">
           <thead>
@@ -77,7 +77,7 @@
           </tbody>
         </v-table>
       </v-col>
-      <v-col cols="12" md="2">
+      <v-col cols="12" md="3">
         <UpdateRank :books="updateRank" />
       </v-col>
     </v-row>
