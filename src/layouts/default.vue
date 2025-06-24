@@ -14,7 +14,7 @@
     </v-list>
   </v-navigation-drawer>
   <v-main>
-    <v-container fluid>
+    <v-container class="mx-auto" fluid style="max-width: 80%;">
       <v-row justify="center">
         <v-col cols="12" md="10">
           <v-sheet class="pa-4" color="white" rounded="lg">
