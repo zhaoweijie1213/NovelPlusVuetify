@@ -1,6 +1,8 @@
 <template>
   <v-list density="compact" nav>
-    <v-subheader>点击榜单</v-subheader>
+    <v-subheader>
+      <h2>点击榜单</h2>
+    </v-subheader>
     <v-list-item
       v-for="book in books"
       :key="book.id"

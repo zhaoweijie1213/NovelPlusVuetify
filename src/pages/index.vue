@@ -1,6 +1,6 @@
 <template>
-  <v-container class="py-4" fluid>
-    <v-row class="mb-8">
+  <v-container fluid>
+    <v-row class="mb-8 row-item">
       <v-col cols="12" md="10">
         <v-carousel height="300" hide-delimiter-background>
           <v-carousel-item v-for="(item, i) in carouselItems" :key="i" :src="item.src" />
@@ -11,7 +11,7 @@
       </v-col>
     </v-row>
 
-    <v-row class="mb-8">
+    <v-row class="mb-8 row-item">
       <v-col cols="12" md="10">
         <h2 class="text-h5 font-weight-bold mb-4">热门推荐</h2>
         <v-row>
@@ -34,7 +34,7 @@
       </v-col>
     </v-row>
 
-    <v-row class="mb-8">
+    <v-row class="mb-8 row-item">
       <v-col cols="12" md="10">
         <h2 class="text-h5 font-weight-bold mb-4">精品推荐</h2>
         <v-row>
@@ -57,10 +57,10 @@
       </v-col>
     </v-row>
 
-    <v-row>
+    <v-row class="row-item">
       <v-col cols="12" md="10">
         <h2 class="text-h5 font-weight-bold mb-4">最新更新</h2>
-        <v-table class="bg-white" density="compact" rounded="lg">
+        <v-table density="compact">
           <thead>
             <tr>
               <th class="text-left">书名</th>
@@ -144,3 +144,8 @@
     { id: 24, name: '榜单三', author: '作者X', cover: '/images/smlcover.png', href: '#' },
   ]
 </script>
+<style scoped>
+  .row-item {
+    background-color: white;
+  }
+  </style>

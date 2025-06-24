@@ -1,6 +1,8 @@
 <template>
   <v-list density="compact" nav>
-    <v-subheader>本周强推</v-subheader>
+    <v-subheader>
+      <h2>本周强推</h2>
+    </v-subheader>
     <v-list-item
       v-for="book in books"
       :key="book.id"

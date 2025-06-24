@@ -13,13 +13,11 @@
       <v-list-item prepend-icon="mdi-account" title="作家专区" to="/author" />
     </v-list>
   </v-navigation-drawer>
-  <v-main>
-    <v-container class="mx-auto" fluid style="max-width: 80%;">
+  <v-main style="background-color: #f5f5f5;">
+    <v-container class="mx-auto" fluid style="max-width: 80%;background-color: #f5f5f5;">
       <v-row justify="center">
         <v-col cols="12" md="10">
-          <v-sheet class="pa-4" color="white" rounded="lg">
-            <router-view />
-          </v-sheet>
+          <router-view />
         </v-col>
       </v-row>
     </v-container>

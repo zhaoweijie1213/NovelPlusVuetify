@@ -1,5 +1,5 @@
 <template>
-  <v-footer app class="d-flex justify-center align-center bg-grey-lighten-4" height="60">
+  <v-footer class="d-flex justify-center align-center bg-grey-lighten-4" height="60">
     <div class="text-center text-caption">
       <v-btn to="/" variant="text">网站首页</v-btn>
       <v-btn to="/user/feedback" variant="text">反馈留言</v-btn>
