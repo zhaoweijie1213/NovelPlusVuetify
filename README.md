@@ -1,6 +1,6 @@
 # 小说精品屋
 
-> 更新于 2025-06-24 12:11:19 (北京时间)
+> 更新于 2025-06-24 14:02:52 (北京时间)
 
 基于 [http://117.72.165.13:8888](http://117.72.165.13:8888) 重构的小说阅读网站前端，使用 **Vue 3** 与 **Vuetify 3** 开发，支持深浅主题切换。项目目录主要分为：
 
@@ -40,6 +40,7 @@ After completing the installation, your environment is ready for Vuetify develop
 - ⚡ **Next-Gen Tooling**: Powered by Vite, experience fast cold starts and instant HMR (Hot Module Replacement). [Vite](https://vitejs.dev/)
 - 🧩 **Automated Component Importing**: Streamline your workflow with unplugin-vue-components, automatically importing components as you use them. [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
 - 🛠️ **Strongly-Typed Vue**: Use vue-tsc for type-checking your Vue components, and enjoy a robust development experience. [vue-tsc](https://github.com/johnsoncodehk/volar/tree/master/packages/vue-tsc)
+- 🎨 **Theme Configuration**: Light theme uses #3eaf7c as the primary color.
 
 These features are curated to provide a seamless development experience from setup to deployment, ensuring that your Vuetify application is both powerful and maintainable.
 
