@@ -1,32 +1,41 @@
 <template>
   <v-container fluid>
     <v-row class="mb-8 rounded-lg row-item">
-      <v-col cols="12" md="9">
+      <v-col cols="12" md="4">
         <v-carousel
+          :continuous="false"
+          delimiter-icon="mdi-square"
+          direction="vertical"
           height="300"
           hide-delimiter-background
+          :show-arrows="false"
           vertical-delimiters="right"
         >
-          <template #item="{ item, props }">
+          <!-- <template #item="{ item, props }">
             <v-btn
               v-bind="props"
-              class="pa-0 ma-0"
+              class="pa-0 my-4"
               size="x-small"
               variant="text"
               @click="router.push(`/book/${(item as any).value.id}`)"
             >
               <v-img height="60" :src="(item as any).value.cover" width="40" />
             </v-btn>
-          </template>
+          </template> -->
           <v-carousel-item
             v-for="book in carouselItems"
             :key="book.id"
             :src="book.cover"
             :value="book"
           >
-            <v-img cover height="300" :src="book.cover" />
+            <v-sheet height="100%" tile width="70%">
+              <v-img cover :src="book.cover" />
+            </v-sheet>
           </v-carousel-item>
         </v-carousel>
+      </v-col>
+      <v-col cols="12" md="5">
+        <div class="hot_articles" />
       </v-col>
       <v-col cols="12" md="3">
         <WeekRecommend :books="weekBooks" />
